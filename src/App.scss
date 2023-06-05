@@ -1,0 +1,49 @@
+// --- VARIABLES --- //
+$mainBackgroundColor: #101018;
+$lightGrey: #262630;
+$lighterGrey: #484854;
+$lightBlue: #2d6bdf;
+$darkBlue: #1d2641;
+$mainRed: #eb6172;
+$darkRed: #321d25;
+$lightRed: #b3143a;
+
+// --- MIXINS --- //
+@mixin flex($direction, $align, $justify) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin radius($deg) {
+  border-radius: $deg;
+  -webkit-border-radius: $deg;
+  -moz-border-radius: $deg;
+  -ms-border-radius: $deg;
+  -o-border-radius: $deg;
+}
+
+.App{
+  height: 145vh;
+  background-color: $mainBackgroundColor;
+}
+
+
+// --- GENERAL --- //
+a{
+  text-decoration: none;
+  color: unset;
+}
+
+.LinkBack{
+  @include flex(null, center, null);
+  & img{
+    padding-right: 5px;
+  }
+}
+
+.Container{
+  width: 1880px;
+  padding-top: 30px;
+}

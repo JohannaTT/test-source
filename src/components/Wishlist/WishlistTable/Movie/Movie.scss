@@ -1,0 +1,33 @@
+@import '../../../../App.scss';
+
+.MovieCard{
+  position: relative;
+  max-height: 279px;
+  max-width: 140px;
+  height: 279px;
+  padding: 15px 10px;
+  border: 1px solid $lightGrey;
+  @include radius(10px);
+  &:not(:last-child){
+    margin-right: 15px;
+  }
+  img{
+    height: 184px;
+  }
+  small{
+    &.categoryTag{
+      margin: 0;
+      padding: 5px;
+      background-color: $darkBlue;
+      color: $lightBlue;
+      @include radius(5px);
+    }
+    &.newTag{
+      position: absolute;
+      top: 25px;
+      right: 0;
+      padding: 3px 5px;
+      background-color: $lightRed;
+    }
+  }
+}
